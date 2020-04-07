@@ -18,7 +18,7 @@ public class Decision extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_decision);
         bottomNav();
-        general();
+        buttonOnClick();
     }
     public void bottomNav(){
         BottomNavigationView botNavView = findViewById(R.id.navigation_bottom);
@@ -41,17 +41,50 @@ public class Decision extends AppCompatActivity {
             }
         });
     }
-    public void general(){
+    public void buttonOnClick(){
         Button general = findViewById(R.id.general);
+        Button tasks = findViewById(R.id.task);
+        Button furniture = findViewById(R.id.furniture);
+        Button holiday = findViewById(R.id.holiday);
         general.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startGeneral();
             }
         });
+        tasks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startTasks();
+            }
+        });
+        furniture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startFurniture();
+            }
+        });
+        holiday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startHoliday();
+            }
+        });
     }
     public void startGeneral(){
         Intent intent = new Intent(this, General.class);
+        startActivity(intent);
+    }
+    public void startFurniture(){
+        Intent intent = new Intent(this, Furniture.class);
+        startActivity(intent);
+    }
+    public void startTasks(){
+        Intent intent = new Intent(this, Tasks.class);
+        startActivity(intent);
+    }
+    public void startHoliday(){
+        Intent intent = new Intent(this, Holiday.class);
         startActivity(intent);
     }
 }
