@@ -9,10 +9,38 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
+        android:text="Decision"
         android:textSize="40sp"
         android:textStyle="bold"
         android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/general"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:text="General Decisions" />
+
+    <Button
+        android:id="@+id/task"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="150dp"
+        android:text="Task Decisions" />
+
+    <Button
+        android:id="@+id/furniture"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="300dp"
+        android:text="Furniture Decisions" />
+
+    <Button
+        android:id="@+id/holiday"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="450dp"
+        android:text="Holiday Decisions" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
