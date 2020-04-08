@@ -1,9 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".General">
+    tools:context=".General"
+>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="590dp"
+                            android:text="Option"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="660dp"
+                            android:text="Option"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="730dp"
+                            android:text="Option"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/decision1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="590dp"
+                            android:layout_marginRight="50dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/decision2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="660dp"
+                            android:layout_marginRight="50dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/decision3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="730dp"
+                            android:layout_marginRight="50dp"
+                            android:text="0"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/generate2"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="570dp"
+                            android:background="@drawable/buttonyellowcorner"
+                            android:text="Generate for two items selected" />
+
+                        <Button
+                            android:id="@+id/generate3"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="650dp"
+                            android:background="@drawable/buttongreycorner"
+                            android:text="Generate For Three Items Selected" />
+
+                        <Button
+                            android:id="@+id/generate4"
+                            android:layout_width="140dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="730dp"
+                            android:background="@drawable/buttonyellowcorner"
+                            android:text="Generate for four items selected" />
+
+                        <EditText
+                            android:id="@+id/problem1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="190dp"
+                            android:layout_marginRight="50dp"
+                            android:background="@drawable/buttonyellowcorner"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="Name"
+                            android:textColor="#FAF6F6" />
+
+                        <EditText
+                            android:id="@+id/problem2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="290dp"
+                            android:layout_marginRight="50dp"
+                            android:background="@drawable/buttongreycorner"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="Name"
+                            android:textColor="#F6F1F1" />
+
+                        <EditText
+                            android:id="@+id/problem3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="390dp"
+                            android:layout_marginRight="50dp"
+                            android:background="@drawable/buttonyellowcorner"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="Name"
+                            android:textColor="#F6F1F1" />
+
+                        <EditText
+                            android:id="@+id/problem4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="490dp"
+                            android:layout_marginRight="50dp"
+                            android:background="@drawable/buttongreycorner"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="Name"
+                            android:textColor="#F6F1F1" />
+
+                        <TextView
+                            android:id="@+id/option1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="200dp"
+                            android:text="Option1"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/option2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="300dp"
+                            android:text="Option2"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/option3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="400dp"
+                            android:text="Option3"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/option4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="500dp"
+                            android:text="Option4"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="false"
+                            app:srcCompat="@drawable/timer" />
+
+                        <TextView
+                            android:id="@+id/general"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginRight="10dp"
+                            android:text="General Decisions"
+                            android:textSize="28sp" />
+                </RelativeLayout>
+
+     </ScrollView>
+
+</RelativeLayout>

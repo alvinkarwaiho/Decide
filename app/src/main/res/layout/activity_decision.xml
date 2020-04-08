@@ -4,44 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Decision">
 
 
     <Button
         android:id="@+id/general"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="120dp"
+        android:background="@drawable/buttonyellowcorner"
+        android:drawableLeft="@drawable/timer"
+        android:shadowColor="#FFFFFF"
         android:text="General Decisions" />
 
     <Button
         android:id="@+id/task"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginTop="150dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/buttonwhitecorner"
+        android:drawableLeft="@drawable/checklist"
         android:text="Task Decisions" />
 
     <Button
         android:id="@+id/furniture"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginTop="300dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/buttongreycorner"
+        android:drawableLeft="@drawable/livingroom"
         android:text="Furniture Decisions" />
 
     <Button
         android:id="@+id/holiday"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginTop="450dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/buttonyellowcorner"
+        android:drawableLeft="@drawable/holiday"
         android:text="Holiday Decisions" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/navigation_bottom"
-        app:itemBackground="@color/colorPrimary"
-        app:itemTextColor="@drawable/itemcolour"
-        app:itemIconTint="@drawable/itemcolour"
-        app:menu="@menu/nav_menu"
         android:layout_alignParentBottom="true"
-        />
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/itemcolour"
+        app:itemTextColor="@drawable/itemcolour"
+        app:menu="@menu/nav_menu" />
+
+
 </RelativeLayout>
