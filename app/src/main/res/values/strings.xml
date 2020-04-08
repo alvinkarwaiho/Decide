@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Decide</string>
+    <string name="tasks_prompt"> Please choose a option from below</string>
+
+    <string-array name="tasks_array">
+        <item>Task 1</item>
+        <item>Task 2 </item>
+        <item>Task 3 </item>
+        <item>Task 4 </item>
+    </string-array>
 </resources>

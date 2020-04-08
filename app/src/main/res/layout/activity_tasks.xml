@@ -1,9 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Tasks">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                app:srcCompat="@drawable/checklist" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:text="Tasks Decisions"
+                android:textSize="28sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:spinnerMode="dropdown"
+                android:entries="@array/tasks_array"
+                android:prompt="@string/tasks_prompt"
+                android:popupBackground="@drawable/popupyellow"
+                />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="300dp"
+                android:background="@drawable/buttongreycorner"
+                android:spinnerMode="dropdown"
+                android:entries="@array/tasks_array"
+                android:prompt="@string/tasks_prompt"
+                android:popupBackground="@drawable/popupgrey"
+                />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="400dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:spinnerMode="dropdown"
+                android:entries="@array/tasks_array"
+                android:prompt="@string/tasks_prompt"
+                android:popupBackground="@drawable/popupyellow"
+                />
+
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/buttongreycorner"
+                android:spinnerMode="dropdown"
+                android:entries="@array/tasks_array"
+                android:prompt="@string/tasks_prompt"
+                android:popupBackground="@drawable/buttongreycorner"
+                />
+            <TextView
+                android:id="@+id/text1tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="590dp"
+                android:text="Option"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text2tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="660dp"
+                android:text="Option"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text3tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="730dp"
+                android:text="Option"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/decision1tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="590dp"
+                android:layout_marginRight="50dp"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/decision2tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="660dp"
+                android:layout_marginRight="50dp"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/decision3tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="730dp"
+                android:layout_marginRight="50dp"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/generate2tasks"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="570dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:text="Generate for two items selected" />
+
+            <Button
+                android:id="@+id/generate3tasks"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="650dp"
+                android:background="@drawable/buttongreycorner"
+                android:text="Generate For Three Items Selected" />
+
+            <Button
+                android:id="@+id/generate4tasks"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="730dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:text="Generate for four items selected" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
