@@ -5,5 +5,206 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Furniture">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+
+            <TextView
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="200dp"
+                android:text="Option1"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="300dp"
+                android:text="Option2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="400dp"
+                android:text="Option3"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="500dp"
+                android:text="Option4"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                app:srcCompat="@drawable/livingroom" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="50dp"
+                android:text="Furniture Decisions"
+                android:textSize="28sp" />
+
+            <Spinner
+                android:id="@+id/spinnerfurniture"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="190dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:entries="@array/furniture_array"
+                android:popupBackground="@drawable/popupyellow"
+                android:prompt="@string/furniture_prompt"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner2furniture"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="290dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/buttongreycorner"
+                android:entries="@array/furniture_array"
+                android:popupBackground="@drawable/popupgrey"
+                android:prompt="@string/furniture_prompt"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner3furniture"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="390dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:entries="@array/furniture_array"
+                android:popupBackground="@drawable/popupyellow"
+                android:prompt="@string/furniture_prompt"
+                android:spinnerMode="dropdown" />
+
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="490dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/buttongreycorner"
+                android:entries="@array/furniture_array"
+                android:popupBackground="@drawable/buttongreycorner"
+                android:prompt="@string/furniture_prompt"
+                android:spinnerMode="dropdown" />
+            <TextView
+                android:id="@+id/text1furniture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="590dp"
+                android:text="Option"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text2furniture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="660dp"
+                android:text="Option"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text3furniture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="730dp"
+                android:text="Option"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/decision1furniture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="590dp"
+                android:layout_marginRight="50dp"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/decision2furniture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="660dp"
+                android:layout_marginRight="50dp"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/decision3furniture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="730dp"
+                android:layout_marginRight="50dp"
+                android:text="0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/generate2furniture"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="570dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:text="Generate for two items selected" />
+
+            <Button
+                android:id="@+id/generate3furniture"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="650dp"
+                android:background="@drawable/buttongreycorner"
+                android:text="Generate For Three Items Selected" />
+
+            <Button
+                android:id="@+id/generate4furniture"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="730dp"
+                android:background="@drawable/buttonyellowcorner"
+                android:text="Generate for four items selected" />
+        </RelativeLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

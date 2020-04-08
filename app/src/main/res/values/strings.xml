@@ -1,11 +1,25 @@
 <resources>
     <string name="app_name">Decide</string>
     <string name="tasks_prompt"> Please choose a option from below</string>
-
+    <string name="furniture_prompt"> Please choose a option from below</string>
+    <string name="holiday_prompt"> Please choose a option from below</string>
     <string-array name="tasks_array">
         <item>Task 1</item>
         <item>Task 2 </item>
         <item>Task 3 </item>
         <item>Task 4 </item>
     </string-array>
+    <string-array name="furniture_array">
+        <item>Furniture 1</item>
+        <item>Furniture 2 </item>
+        <item>Furniture 3 </item>
+        <item>Furniture 4 </item>
+    </string-array>
+    <string-array name="holiday_array">
+        <item>Holiday 1</item>
+        <item>Holiday 2 </item>
+        <item>Holiday 3 </item>
+        <item>Holiday 4 </item>
+    </string-array>
+
 </resources>
