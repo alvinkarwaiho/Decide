@@ -8,9 +8,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#A49A9A97">
 
 
             <TextView
@@ -20,7 +22,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="200dp"
                 android:text="Option1"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/option2"
@@ -29,7 +32,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="300dp"
                 android:text="Option2"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -38,7 +42,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="400dp"
                 android:text="Option3"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -47,7 +52,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="500dp"
                 android:text="Option4"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -63,7 +69,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="50dp"
                 android:text="Furniture Decisions"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spinnerfurniture"
@@ -116,6 +123,7 @@
                 android:popupBackground="@drawable/buttongreycorner"
                 android:prompt="@string/furniture_prompt"
                 android:spinnerMode="dropdown" />
+
             <TextView
                 android:id="@+id/text1furniture"
                 android:layout_width="wrap_content"

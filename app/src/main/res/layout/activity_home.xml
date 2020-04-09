@@ -12,14 +12,12 @@
         android:textSize="40sp"
         android:textStyle="bold"
         android:layout_centerInParent="true"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/navigation_bottom"
-        app:itemBackground="@color/colorPrimary"
-        app:itemTextColor="@drawable/itemcolour"
-        app:itemIconTint="@drawable/itemcolour"
-        app:menu="@menu/nav_menu"
         android:layout_alignParentBottom="true"
-        />
+        app:itemBackground="@color/colorPrimary"
+        app:menu="@menu/nav_menu" />
 </RelativeLayout>

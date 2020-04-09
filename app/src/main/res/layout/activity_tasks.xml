@@ -9,9 +9,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#EACB9D">
 
 
             <TextView
@@ -21,7 +23,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="200dp"
                 android:text="Option1"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/option2"
@@ -30,7 +33,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="300dp"
                 android:text="Option2"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -39,7 +43,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="400dp"
                 android:text="Option3"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -48,7 +53,8 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="500dp"
                 android:text="Option4"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -65,7 +71,8 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:text="Tasks Decisions"
-                android:textSize="28sp" />
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spinner"
@@ -118,6 +125,7 @@
                 android:popupBackground="@drawable/buttongreycorner"
                 android:prompt="@string/tasks_prompt"
                 android:spinnerMode="dropdown" />
+
             <TextView
                 android:id="@+id/text1tasks"
                 android:layout_width="wrap_content"
