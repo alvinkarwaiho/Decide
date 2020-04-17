@@ -9,15 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Holiday"
-                  android:parentActivityName=".Decision"/>
-        <activity android:name=".Furniture"
-                  android:parentActivityName=".Decision"/>
-        <activity android:name=".Tasks"
-                  android:parentActivityName=".Decision"/>
-        <activity android:name=".General"
-                  android:parentActivityName=".Decision"/>
-        <activity android:name=".Notepad" />
+        <activity
+            android:name=".Notepad"
+            android:label="@string/title_activity_notepad"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Holiday"
+            android:parentActivityName=".Decision" />
+        <activity
+            android:name=".Furniture"
+            android:parentActivityName=".Decision" />
+        <activity
+            android:name=".Tasks"
+            android:parentActivityName=".Decision" />
+        <activity
+            android:name=".General"
+            android:parentActivityName=".Decision" />
         <activity android:name=".Decision" />
         <activity android:name=".MainActivity">
             <intent-filter>
