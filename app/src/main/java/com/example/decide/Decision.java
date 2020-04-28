@@ -23,7 +23,6 @@ public class Decision extends AppCompatActivity {
     public void bottomNav(){
         BottomNavigationView botNavView = findViewById(R.id.navigation_bottom);
         botNavView.setSelectedItemId(R.id.decisions);
-
         botNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

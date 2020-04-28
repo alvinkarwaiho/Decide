@@ -1,60 +1,57 @@
 package com.example.decide;
-
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.io.BufferedReader;
-import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
 public class Notepad extends AppCompatActivity {
-    private EditText input1;
-    private Toolbar bar;
+    private EditText enterInformation;
+    private Toolbar decoratedTitle;
+    private String detail="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notepad);
-        bar = findViewById(R.id.toolbar);
-        bar.setTitle("Notepad");
-        FloatingActionButton delete = findViewById(R.id.delete);
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                input1.getText().clear();
-            }
-        });
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        decoratedTitle = findViewById(R.id.toolbar);
+        decoratedTitle.setTitle("Notepad");
+
+
+        enterInformation = findViewById(R.id.enter);
+        enterInformation.setText(Open("theNotes.txt"));
+        bottomNav();
+        clearNotes();
+        saveNotes();
+    }
+    public void saveNotes(){
+        FloatingActionButton save = findViewById(R.id.save);
+        save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Save("theNotes.txt");
-
             }
         });
-        input1 = findViewById(R.id.enter);
-        input1.setText(Open("theNotes.txt"));
-        bottomNav();
-
-
+    }
+    public void clearNotes(){
+        FloatingActionButton clear = findViewById(R.id.delete);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                enterInformation.getText().clear();
+            }
+        });
     }
     public void bottomNav(){
         BottomNavigationView botNavView = findViewById(R.id.navigation_bottom);
@@ -77,12 +74,12 @@ public class Notepad extends AppCompatActivity {
         });
     }
     public void Save(String nameOfFile){
-       input1 = findViewById(R.id.enter);
+       enterInformation = findViewById(R.id.enter);
         try{
-            OutputStreamWriter osw = new OutputStreamWriter(openFileOutput(nameOfFile,0));
-            osw.write(input1.getText().toString());
-            osw.close();
-            Toast.makeText(this, "Note Saved!", Toast.LENGTH_SHORT).show();
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput(nameOfFile,0));
+            outputStreamWriter.write(enterInformation.getText().toString());
+            outputStreamWriter.close();
+            Toast.makeText(this, "New note has been saved", Toast.LENGTH_SHORT).show();
 
         }
         catch (Throwable exception){
@@ -90,29 +87,24 @@ public class Notepad extends AppCompatActivity {
         }
     }
     public String Open(String nameOfFile){
-        String content = "";
-        if(FileExists(nameOfFile)){
             try {
-                InputStream input = openFileInput(nameOfFile);
-                if(input != null){
-                    InputStreamReader temporarily = new InputStreamReader(input);
-                    BufferedReader read = new BufferedReader(temporarily);
-                    String s;
-                    StringBuilder buffer = new StringBuilder();
-                    while((s = read.readLine()) != null){
-                        buffer.append(s +"\n");
-                    } input.close();
-                    content = buffer.toString();
-                }
-            } catch(java.io.FileNotFoundException exception){ }catch (Throwable t){
-                Toast.makeText(this, "Exception :"+ t.toString(),Toast.LENGTH_LONG).show();
+                InputStream inputStream = openFileInput(nameOfFile);
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader read = new BufferedReader(inputStreamReader);
+                String local;
+                StringBuilder stringBuilder = new StringBuilder();
+                while((local = read.readLine()) != null){
+                    stringBuilder.append(local +"\n");
+                } inputStream.close();
+                    detail = stringBuilder.toString();
+            } catch (FileNotFoundException fileNotFound){
+                Toast.makeText(this, "File not found Exception"+ fileNotFound.toString(),Toast.LENGTH_LONG).show();
             }
-        }
-        return content;
+            catch (IOException io){
+                Toast.makeText(this, "Input or Output Exception"+io.toString(),Toast.LENGTH_SHORT).show();
+            }
+        return detail;
     }
-    public boolean FileExists(String fileName) {
-        File theFile = getBaseContext().getFileStreamPath(fileName);
-        return  theFile.exists();
-    }
+
 
 }

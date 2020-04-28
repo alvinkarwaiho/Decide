@@ -17,7 +17,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView botNavView;
-
     private TextView firstInfo;
     private TextView secondInfo;
     private TextView thirdInfo;
